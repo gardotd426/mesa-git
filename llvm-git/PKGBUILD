@@ -359,9 +359,9 @@ package_lib32-llvm-libs-git() {
 package_lib32-llvm-git() {
   pkgdesc='Low Level Virtual Machine (32-bit)(git version)'
   depends=("lib32-llvm-libs-git=$pkgver" 'llvm-git')
-  provides=('lib32-llvm')
-  replaces=('lib32-llvm-svn' 'llvm-svn')
-  conflicts=('lib32-llvm' 'lib32-llvm-svn')
+  provides=('lib32-llvm' 'lib32-clang')
+  replaces=('lib32-llvm-svn' 'llvm-svn' 'lib32-clang')
+  conflicts=('lib32-llvm' 'lib32-llvm-svn' 'lib32-clang')
 
   _fakeinstall_32 fakeinstall_32/usr/lib32
   # Remove libs which conflict with llvm-libs
